@@ -1,0 +1,251 @@
+$mobile-width: 414px;
+$desktop-width: 1440px;
+
+.filter {
+  width: calc(100vw - 32px);
+  height: 228px;
+
+  @media(min-width: $desktop-width) {
+    width: auto;
+    display: grid;
+    grid-template-columns: 216px 487px;
+  }
+}
+
+.filter-history {
+  display: none;
+  border-right: 1px solid #E1E4E6;
+
+  @media(min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.history-title {
+  margin: 20px 0 0 16px;
+  color: #7F878C;
+  font-family: 'Caption';
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.title-border {
+  height: 6px;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.history-list {
+  margin: 0;
+  padding: 0;
+  margin-left: 16px;
+  list-style: none;
+}
+
+.history-item {
+  padding-top: 7px;
+  padding-bottom: 8px;
+  color: #2A3033;
+  font-family: 'Body';
+  font-size: 14px;
+  &:last-child {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.8) 20%, #ffffff 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+
+.form-wrapper {
+  position: relative;
+  display: grid;
+}
+
+.input-label {
+  position: absolute;
+  top: 17px;
+  left: 38px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: 'Caption';
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+
+.form-input {
+  width: calc(100vw - 50px);
+  height: 46px;
+  margin-top: 24px;
+  padding-left: 16px;
+  justify-self: center;
+  color: #2A3033;
+  font-family: 'Body';
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  outline: none;
+  &::placeholder {
+    padding-left: 0;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: 'Body';
+    font-size: 14px;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 419px;
+    padding-left: 20px;
+  }
+}
+
+.input-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 37px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  font-family: 'Body';
+  font-size: 14px;
+  font-weight: 600;
+  color: #656E73;
+  border: none;
+  border-radius: 4px;
+  background-color: #EFF1F2;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(0.95);
+  }
+  &:active {
+    filter: brightness(0.9);
+  }
+
+  @media(min-width: $desktop-width) {
+    right: 34px;
+  }
+}
+
+.form-all {
+  display: grid;
+  margin-left: 0;
+  margin-top: 18px;
+  &--only {
+    margin-top: 12px;
+  }
+
+  @media(min-width: $desktop-width) {
+    display: flex;
+    margin-left: 27px;
+  }
+}
+
+.visually-hidden {
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.control-services {
+  position: relative;
+  display: flex;
+  height: 36px;
+  padding-left: 19px;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.control-services-mark {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+
+  @media(min-width: $desktop-width) {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(127, 135, 140, 0.8);
+    border-radius: 3px;
+    background-color: #FFFFFF;
+  }
+}
+
+.control-services-mark:hover {
+  filter: brightness(1);
+  border: none;
+
+  @media(min-width: $desktop-width) {
+    filter: brightness(0.98);
+    border: 2px solid rgba(127, 135, 140, 1);
+  }
+}
+
+.control-services-mark:focus {
+  border: none;
+
+  @media(min-width: $desktop-width) {
+    border: 3px solid #83B3D3;
+  }
+}
+
+.control-services-mark:active {
+  filter: brightness(1);
+
+  @media(min-width: $desktop-width) {
+    filter: brightness(0.90);
+  }
+}
+
+.control-input[type="checkbox"]:checked + .control-services-mark::before {
+  position: absolute;
+  width: 12.2px;
+  height: 9.9px;
+  background-size: 100%;
+  top: 7px;
+  left: 7px;
+  background-image: url("../../assets/icon.svg");
+  content: "";
+
+  @media(min-width: $desktop-width) {
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.all-label {
+  padding-left: 14px;
+  font-family: 'Body';
+  font-size: 14px;
+  font-weight: 500;
+  color: #2A3033;
+}
+
+.form-title {
+  margin-top: 12px;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-family: 'Body';
+  font-size: 14px;
+  font-weight: 500;
+  color: #2A3033;
+
+  @media(min-width: $desktop-width) {
+    margin-top: 12px;
+    margin-left: 22px;
+  }
+}

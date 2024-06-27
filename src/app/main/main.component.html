@@ -1,0 +1,12 @@
+<div class="main-page">
+  <div class="main-page_wrapper">
+    <header
+      [notifications]="notifications"
+      (data)="onFilterData($event)">
+    </header>
+    <logic
+      (notification)="onNotification($event)"
+      [filterData]="filterData">
+    </logic>
+  </div>
+</div>

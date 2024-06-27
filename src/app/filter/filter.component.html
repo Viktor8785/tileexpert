@@ -1,0 +1,57 @@
+<div class="filter">
+  <div class="filter-history">
+    <div>
+      <p class="history-title">
+        История
+      </p>
+      <div class="title-border"></div>
+    </div>
+    <ul class="history-list">
+      <li class="history-item" *ngFor="let item of historyList">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+  <form class="filter-form" [formGroup]="form">
+    <div class="form-wrapper">
+      <input class="form-input" formControlName="author" id="author" type="text" placeholder="Имя или должность">
+      <label class="input-label" for="author">Автор</label>
+      <div class="input-button" (click)="onMyself()">Я</div>
+    </div>
+    <div class="form-all">
+      <label class="control-services">
+        <input class="control-input visually-hidden" formControlName="participant" type="checkbox">
+        <div class="control-services-mark"></div>
+        <div class="all-label">Я участник</div>
+      </label>
+      <label class="control-services">
+        <input class="control-input visually-hidden" formControlName="strictly" type="checkbox">
+        <div class="control-services-mark"></div>
+        <div class="all-label">Строгий поиск</div>
+      </label>
+      <label class="control-services">
+        <input class="control-input visually-hidden" formControlName="headers" type="checkbox">
+        <div class="control-services-mark"></div>
+        <div class="all-label">В заголовках</div>
+      </label>
+    </div>
+    <p class="form-title">Только</p>
+    <div class="form-all form-all--only">
+      <label class="control-services">
+        <input class="control-input visually-hidden" formControlName="tags" type="checkbox">
+        <div class="control-services-mark"></div>
+        <div class="all-label">Теги</div>
+      </label>
+      <label class="control-services">
+        <input class="control-input visually-hidden" formControlName="asks" type="checkbox">
+        <div class="control-services-mark"></div>
+        <div class="all-label">Просьбы</div>
+      </label>
+      <label class="control-services">
+        <input class="control-input visually-hidden" formControlName="contacts" type="checkbox">
+        <div class="control-services-mark"></div>
+        <div class="all-label">Контакты</div>
+      </label>
+    </div>
+  </form>
+</div>

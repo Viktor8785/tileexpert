@@ -1,0 +1,90 @@
+<div class="header">
+  <div class="header-wrapper">
+    <li class="header-list_item header-list_item--menu">
+      <p class="item-icon">
+        <img class="icon_img" src="../../assets/menu.svg">
+      </p>
+    </li>
+    <ul class="header-list">
+      <li class="header-list_item header-list_item--mobile">
+        <p class="item-icon">
+          <img class="icon_img" src="../../assets/link.svg">
+        </p>
+        <p class="item-title">
+          Ссылки
+        </p>
+      </li>
+      <li class="header-list_item header-list_item--mobile">
+        <p class="item-icon">
+          <img class="icon_img" src="../../assets/contacts.svg">
+        </p>
+        <p class="item-title">
+          Контакты
+        </p>
+      </li>
+      <li class="header-list_item header-list_item--mobile">
+        <p class="item-icon">
+          <img class="icon_img" src="../../assets/tag.svg">
+        </p>
+        <p class="item-title">
+          Теги
+        </p>
+      </li>
+      <li class="header-list_item header-list_item--mobile">
+        <p class="item-icon">
+          <img class="icon_img" src="../../assets/favorites.svg">
+        </p>
+        <p class="item-title">
+          Избранное
+        </p>
+      </li>
+      <li class="header-list_item header-list_item--history">
+        <p class="item-icon">
+          <img class="icon_img" src="../../assets/history.svg">
+        </p>
+        <p class="item-title">
+          Посещения
+        </p>
+      </li>
+      <li class="header-list_item header-list_item--search">
+        <p class="item-icon" (click)="onClickSearch()">
+          <img class="icon_img" src="../../assets/search.svg">
+        </p>
+      </li>
+      <li class="header-list_item header-list_item--add">
+        <p class="item-icon">
+          <img class="icon_img" src="../../assets/add2.svg">
+        </p>
+      </li>
+      <li class="header-list_item header-list_item--notifications">
+        <p class="item-icon">
+          <img class="icon_img" src="../../assets/notifications.svg">
+        </p>
+        <div class="header-notifications">
+          {{notifications}}
+        </div>
+      </li>
+    </ul>
+    <div [@openClose]="isOpen ? 'open' : 'closed'" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+      <input [(ngModel)]="search" class="search-input" (click)="onClickInput()" (keyup)="onKeyUp($event, false)" placeholder="Поисковый запрос">
+    </div>
+    <div class="search-filter" *ngIf="isClick && isOpen" (mouseenter)="onFilterMouseEnter()" (mouseleave)="onFilterMouseLeave()">
+      <filter (valueChange)="valueChange($event)">
+      </filter>
+    </div>
+  </div>
+  <div [@openMobileClose]="isMobileOpen ? 'open' : 'closed'">
+    <div class="search-wrapper">
+      <div class="search-input-wrapper">
+        <div class="item-icon item-icon--back" (click)="onClickMobileInput()">
+          <img class="icon_img--back" src="../../assets/back.svg">
+        </div>
+        <input [(ngModel)]="search" class="search-input" (keyup)="onKeyUp($event, true)" placeholder="Поиск">
+      </div>
+      <div class="search-filter">
+        <filter (valueChange)="valueChange($event)">
+        </filter>
+      </div>
+    </div>
+  </div>
+</div>

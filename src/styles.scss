@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Body";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/font/Body.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Body";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/font/Body.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Body";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/assets/font/Body-Light.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Body";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/assets/font/Body-Light.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Body";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../src/assets/font/Body-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Body";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../src/assets/font/Body-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caption";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/font/PTSansCaption-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caption";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/font/PTSansCaption-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caption";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../src/assets/font/PTSansCaption-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caption";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../src/assets/font/PTSansCaption-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: "Body", sans-serif;
+  font-weight: 500;
+}
+
+:root {
+  --mobile-width: 414px;
+}
